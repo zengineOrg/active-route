@@ -5,10 +5,8 @@ namespace Zengine\ActiveRoute;
 use Illuminate\Routing\Router as Route;
 use Illuminate\Routing\UrlGenerator as URL;
 
-
 class ActiveRoute
 {
-
     protected $route;
 
     protected $url;
@@ -22,27 +20,25 @@ class ActiveRoute
     /**
      * Compares given route name with current route name.
      * Any section of the route name can be replaced with a * wildcard.
-     * Example: user.*
+     * Example: user.*.
      *
      * @param  string $routeName
      * @param  string $output
      *
-     * @return boolean
+     * @return bool
      */
-    public function isActiveRoute($routeName, $output = "active")
+    public function isActiveRoute($routeName, $output = 'active')
     {
         if (strpos($routeName, '*') !== false) {
             // Quote all RE characters, then undo the quoted '*' characters to match any
             // sequence of non-'.' characters.
-            $regex = '/^' . str_replace(preg_quote('*'), '[^.]*?', preg_quote($routeName, '/')) . '$/';
+            $regex = '/^'.str_replace(preg_quote('*'), '[^.]*?', preg_quote($routeName, '/')).'$/';
             if (preg_match($regex, $this->route->currentRouteName())) {
                 return $output;
             }
         } elseif ($this->route->currentRouteName() == $routeName) {
             return $output;
         }
-
-        return null;
     }
 
     /**
@@ -51,15 +47,13 @@ class ActiveRoute
      * @param  string $url
      * @param  string $output
      *
-     * @return boolean
+     * @return bool
      */
-    public function isActiveURL($url, $output = "active")
+    public function isActiveURL($url, $output = 'active')
     {
         if ($this->url->current() == $this->url->to($url)) {
             return $output;
         }
-
-        return null;
     }
 
     /**
@@ -68,15 +62,13 @@ class ActiveRoute
      * @param  string $string
      * @param  string $output
      *
-     * @return boolean
+     * @return bool
      */
-    public function isActiveMatch($string, $output = "active")
+    public function isActiveMatch($string, $output = 'active')
     {
         if (strpos($this->url->current(), $string) !== false) {
             return $output;
         }
-
-        return null;
     }
 
     /**
@@ -85,17 +77,15 @@ class ActiveRoute
      * @param  array  $routeNames
      * @param  string $output
      *
-     * @return boolean
+     * @return bool
      */
-    public function areActiveRoutes(array $routeNames, $output = "active")
+    public function areActiveRoutes(array $routeNames, $output = 'active')
     {
         foreach ($routeNames as $routeName) {
             if ($this->isActiveRoute($routeName, true)) {
                 return $output;
             }
         }
-
-        return null;
     }
 
     /**
@@ -104,17 +94,14 @@ class ActiveRoute
      * @param  array  $urls
      * @param  string $output
      *
-     * @return boolean
+     * @return bool
      */
-    public function areActiveURLs(array $urls, $output = "active")
+    public function areActiveURLs(array $urls, $output = 'active')
     {
         foreach ($urls as $url) {
             if ($this->isActiveURL($url, true)) {
                 return $output;
             }
         }
-
-        return null;
     }
-
 }
