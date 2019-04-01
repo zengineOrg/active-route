@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/zengineOrg/active-route.svg?branch=master)](https://travis-ci.org/zengineOrg/active-route)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/zengineOrg/active-route/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/zengineOrg/active-route/?branch=master)
 [![Total Downloads](https://poser.pugx.org/zengine/active-route/downloads)](https://packagist.org/packages/zengine/active-route)
-[![StyleCI](https://github.styleci.io/repos/178827070/shield?branch=master)]
+[![StyleCI](https://github.styleci.io/repos/178827070/shield?branch=master)](https://github.styleci.io/repos/178827070)
 
 Easily detect if a route or url is the current.
 
