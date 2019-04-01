@@ -1,0 +1,58 @@
+{
+    "name": "zengine/active-route",
+    "description": "Active route detection for laravel",
+    "keywords": [
+        "zengine",
+        "active-route"
+    ],
+    "homepage": "https://github.com/zengineOrg/active-route",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Christian Bartelt",
+            "email": "christian@zenigne.org",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*",
+        "illuminate/routing": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Zengine\\ActiveRoute\\": "src"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Zengine\\ActiveRoute\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Zengine\\ActiveRoute\\ActiveRouteServiceProvider"
+            ],
+            "aliases": {
+                "ActiveRoute": "Zengine\\ActiveRoute\\ActiveRouteFacade"
+            }
+        }
+    }
+}
