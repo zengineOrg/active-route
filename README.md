@@ -1,9 +1,11 @@
 # Laravel Active Route
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/zengine/active-route.svg?style=flat-square)](https://packagist.org/packages/zengine/active-route)
-[![Build Status](https://img.shields.io/travis/zengine/active-route/master.svg?style=flat-square)](https://travis-ci.org/zengine/active-route)
-[![Quality Score](https://img.shields.io/scrutinizer/g/zengine/active-route.svg?style=flat-square)](https://scrutinizer-ci.com/g/zengine/active-route)
-[![Total Downloads](https://img.shields.io/packagist/dt/zengine/active-route.svg?style=flat-square)](https://packagist.org/packages/zengine/active-route)
+[![Latest Stable Version](https://poser.pugx.org/zengine/active-route/v/stable)](https://packagist.org/packages/zengine/active-route)
+[![Latest Unstable Version](https://poser.pugx.org/zengine/active-route/v/unstable)](https://packagist.org/packages/zengine/active-route)
+[![Build Status](https://travis-ci.org/zengineOrg/active-route.svg?branch=master)](https://travis-ci.org/zengineOrg/active-route)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/zengineOrg/active-route/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/zengineOrg/active-route/?branch=master)
+[![Total Downloads](https://poser.pugx.org/zengine/active-route/downloads)](https://packagist.org/packages/zengine/active-route)
+[![StyleCI](https://github.styleci.io/repos/178827070/shield?branch=master)]
 
 Easily detect if a route or url is the current.
 
